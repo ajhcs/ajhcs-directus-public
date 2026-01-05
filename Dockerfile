@@ -1,3 +1,5 @@
 FROM directus/directus:11.14.0
 
-RUN pnpm config set ignore-scripts false && pnpm add sharp
+# Enable build scripts for sharp using pnpm configuration
+RUN npm pkg set 'pnpm.onlyBuiltDependencies[]=sharp'
+RUN pnpm add sharp
