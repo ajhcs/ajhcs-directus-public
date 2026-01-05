@@ -1,9 +1,7 @@
 FROM directus/directus:11.14.0
 USER root
-# 1. Fix the "keyid" error by updating corepack
 RUN npm install -g corepack@latest
-# 2. Turn on pnpm
 RUN corepack enable
+# Use npm instead of pnpm to avoid the script restriction issue
+RUN npm install sharp
 USER node
-# 3. Install sharp into the Directus folder (where it belongs)
-RUN pnpm add sharp
