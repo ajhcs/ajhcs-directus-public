@@ -1,3 +1,3 @@
 FROM directus/directus:11.14.0
 
-RUN pnpm add sharp
+RUN pnpm config set ignore-scripts false && pnpm add sharp
