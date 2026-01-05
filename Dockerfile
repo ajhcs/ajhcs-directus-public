@@ -1,4 +1,4 @@
-FROM directus/directus:11.3.0
+FROM directus/directus:11.14.0
 USER root
 # 1. Fix the "keyid" error by updating corepack
 RUN npm install -g corepack@latest
