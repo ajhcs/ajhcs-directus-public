@@ -1,5 +1,4 @@
 FROM directus/directus:11.3.0
 USER root
-RUN corepack enable
+RUN npm install -g sharp --unsafe-perm
 USER node
-RUN pnpm add sharp
